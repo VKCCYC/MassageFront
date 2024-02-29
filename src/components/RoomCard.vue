@@ -1,7 +1,7 @@
 <template lang="pug">
 v-parallax(
-    height="300"
-    src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg")
+  height="500"
+  src="@/assets/eforea-Relaxation-Room.jpg")
 
 v-container
   v-row
@@ -14,6 +14,10 @@ v-container
       p 無論您是想舒緩疲勞、改善姿勢、增加靈活性，還是純粹想享受一段愉悅的時光，我們都能滿足您的需求。讓我們帶您走進一段放鬆與療癒的旅程，讓您重拾活力，迎接美好的每一天。
 
 </template>
+
+<script setup>
+const img = new URL('@/assets/Kenmochi-Toya01.jpg', import.meta.url).href
+</script>
 
 <style scoped lang="sass">
 p

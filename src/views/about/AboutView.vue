@@ -1,7 +1,7 @@
 <template lang="pug">
 v-parallax(
-    height="300"
-    src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg")
+    height="600"
+    src="@/assets/eforea-Relaxation-Room.jpg")
 
 v-container
   v-row
@@ -16,7 +16,7 @@ v-container
       p 當您感到疲憊、壓力山大時，一段舒適的按摩時光能夠為您帶來身心的放鬆與舒緩。我們專業的按摩師掌握著多種技術，針對不同部位的肌肉緊張和壓力進行針對性的放鬆，讓您重拾活力，舒展身心。以下是我們提供的不同部位的按摩技術：
       div &nbsp;
     v-col(cols="12" v-for='(link, i) in links' :key='i' )
-      v-img(:src="link.src")
+      v-img.mr( :src="link.src")
       h2.mt-4 {{ link.title }}
       p {{ link.p1 }}
       p {{ link.p2 }}
@@ -29,11 +29,11 @@ v-container
 import { onMounted } from 'vue'
 
 const links = [
-  { src: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg', title: '頭部、肩頸按摩：', p1: '通過溫和的按摩和輕柔的壓力，釋放頭部、肩頸部位的緊張和壓力。', p2: '針對頸椎周圍的肌肉進行輕微拉伸和按摩，促進血液循環，緩解頸部僵硬和不適。' },
-  { src: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg', title: '背部按摩：', p1: '以不同強度的按摩手法，從上至下覆蓋背部各個區域，釋放背部肌肉的壓力。', p2: '針對脊柱兩側的肌肉進行揉捏和推壓，改善姿勢，減輕背部疲勞和僵硬。' },
-  { src: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg', title: '上半身按摩：', p1: '聚焦於肩膀、手臂和背部等部位，針對性地緩解上半身的肌肉疲勞和不適。', p2: '透過拍打、揉捏和按壓，促進淋巴循環，幫助排除體內毒素，增加身體活力。' },
-  { src: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg', title: '下半身按摩：', p1: '聚焦於腰部、臀部、大腿和小腿等部位，舒緩下半身的肌肉疲勞和僵硬。', p2: '以揉捏、拉伸和按壓的手法，促進血液循環，減輕下半身的浮腫和不適感。' },
-  { src: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg', title: '全身按摩：', p1: '綜合運用各種技術手法，從頭到腳全面放鬆肌肉，舒緩身心壓力。', p2: '幫助您重拾活力，提升整體身心的健康和幸福感。' }
+  { src: new URL('@/assets/eforea-Relaxation-Room.jpg', import.meta.url).href, title: '頭部、肩頸按摩：', p1: '通過溫和的按摩和輕柔的壓力，釋放頭部、肩頸部位的緊張和壓力。', p2: '針對頸椎周圍的肌肉進行輕微拉伸和按摩，促進血液循環，緩解頸部僵硬和不適。' },
+  { src: new URL('@/assets/eforea-Relaxation-Room.jpg', import.meta.url).href, title: '背部按摩：', p1: '以不同強度的按摩手法，從上至下覆蓋背部各個區域，釋放背部肌肉的壓力。', p2: '針對脊柱兩側的肌肉進行揉捏和推壓，改善姿勢，減輕背部疲勞和僵硬。' },
+  { src: new URL('@/assets/eforea-Relaxation-Room.jpg', import.meta.url).href, title: '上半身按摩：', p1: '聚焦於肩膀、手臂和背部等部位，針對性地緩解上半身的肌肉疲勞和不適。', p2: '透過拍打、揉捏和按壓，促進淋巴循環，幫助排除體內毒素，增加身體活力。' },
+  { src: new URL('@/assets/eforea-Relaxation-Room.jpg', import.meta.url).href, title: '下半身按摩：', p1: '聚焦於腰部、臀部、大腿和小腿等部位，舒緩下半身的肌肉疲勞和僵硬。', p2: '以揉捏、拉伸和按壓的手法，促進血液循環，減輕下半身的浮腫和不適感。' },
+  { src: new URL('@/assets/eforea-Relaxation-Room.jpg', import.meta.url).href, title: '全身按摩：', p1: '綜合運用各種技術手法，從頭到腳全面放鬆肌肉，舒緩身心壓力。', p2: '幫助您重拾活力，提升整體身心的健康和幸福感。' }
 ]
 
 onMounted(() => {
@@ -55,4 +55,7 @@ p
 h1
   color: #d9d5d2
   font-size: 3rem
+.mr
+  height: 50vh
+  background-color: black
 </style>

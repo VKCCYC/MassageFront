@@ -108,8 +108,8 @@ const gogo = (id) => {
   color: #403635
 .vcard
   height: 48vh
-  width: 31rem
-  // width: calc( 41vw + 0.5rem )
+  // width: 31rem
+  width: calc( 41vw + 0.5rem )
 .vcardP
   height: 50vh
   width: 62vw
